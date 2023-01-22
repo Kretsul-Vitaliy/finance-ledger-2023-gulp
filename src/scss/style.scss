@@ -49,7 +49,7 @@ $mobileSmall: em(479.98); // Телефоны S
 
 body {
   color: $mainColor;
-  background-color: $mainDarkYellow;
+  background-color: $mainYellow;
   // Скролл заблокирован
   .lock & {
     overflow: hidden;
