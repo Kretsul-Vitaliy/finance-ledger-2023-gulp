@@ -14,6 +14,7 @@ $fontSize: 18px;
 $mainColor: #fff;
 $mainDark: #0c0b08;
 $mainYellow: #dcca87;
+$mainGray: #46434366;
 $mainDarkYellow: #ac9a5a;
 $mainWhite: #fff;
 
@@ -49,7 +50,7 @@ $mobileSmall: em(479.98); // Телефоны S
 
 body {
   color: $mainColor;
-  background-color: $mainYellow;
+  background-color: $mainGray;
   // Скролл заблокирован
   .lock & {
     overflow: hidden;
