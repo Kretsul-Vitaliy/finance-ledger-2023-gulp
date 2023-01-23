@@ -26,15 +26,19 @@ import { imagesMin } from './gulp/tasks/imagesMin.js';
 import { otfToTft, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
 import { sprite } from './gulp/tasks/sprite.js';
 import { zip } from './gulp/tasks/zip.js';
+import { copySW } from './gulp/tasks/copySW.js';
 
 // watcher files
 function watcher() {
   gulp.watch(path.watch.files, copy);
+  gulp.watch(path.watch.manifest, copy);
+  gulp.watch(path.watch.robots, copy);
   gulp.watch(path.watch.html, html);
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, imagesOrigin);
   gulp.watch(path.watch.images, imagesMin);
+  gulp.watch(path.watch.sw, copySW);
 }
 
 export { sprite };
@@ -51,10 +55,20 @@ const mainTasksMin = gulp.series(
 );
 
 // build scenario run task
-const dev = gulp.series(reset, mainTasksOrigin, gulp.parallel(watcher, server));
-const devMin = gulp.series(reset, mainTasksMin, gulp.parallel(watcher, server));
-const build = gulp.series(reset, mainTasksOrigin);
-const deployZIP = gulp.series(reset, mainTasksOrigin, zip);
+const dev = gulp.series(
+  reset,
+  mainTasksOrigin,
+  copySW,
+  gulp.parallel(watcher, server)
+);
+const devMin = gulp.series(
+  reset,
+  mainTasksMin,
+  copySW,
+  gulp.parallel(watcher, server)
+);
+const build = gulp.series(reset, mainTasksOrigin, copySW);
+const deployZIP = gulp.series(reset, mainTasksOrigin, copySW, zip);
 
 export { dev };
 export { build };
