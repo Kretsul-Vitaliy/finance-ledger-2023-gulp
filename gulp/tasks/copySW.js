@@ -13,5 +13,5 @@ export const copySW = () => {
         })
       )
     )
-    .pipe(app.gulp.dest(app.path.build.js));
+    .pipe(app.gulp.dest(app.path.build.html));
 };
