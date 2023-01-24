@@ -1,5 +1,4 @@
 import webpack from 'webpack-stream';
-import rename from 'gulp-rename';
 
 export const js = () => {
   return app.gulp
@@ -13,23 +12,13 @@ export const js = () => {
       )
     )
     .pipe(
-      app.plugins.if(
-        app.isBuild,
-        webpack({
-          mode: 'production',
-          output: {
-            filename: 'app.min.js',
-          },
-        })
-      )
-    )
-    .pipe(
-      app.plugins.if(
-        app.isDev,
-        rename({
-          extname: '.min.js',
-        })
-      )
+      webpack({
+        // mode: app.isBuild ? 'production' : 'development',
+        mode: 'production',
+        output: {
+          filename: 'app.min.js',
+        },
+      })
     )
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(app.plugins.browserSync.stream());

@@ -1,4 +1,5 @@
-import * as flsFunctions from './files/functions.js';
+import * as flsFunctions from './files/isWebP.js';
+import { scrollHeight } from './files/scrollHeight.js';
 
 window.addEventListener('load', async () => {
   if ('serviceWorker' in navigator) {
@@ -12,7 +13,7 @@ window.addEventListener('load', async () => {
 });
 
 flsFunctions.isWebp();
-
+scrollHeight();
 // import Swiper, { Navigation, Pagination } from 'swiper';
 
 // const swiper = new Swiper();

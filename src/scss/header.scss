@@ -1,0 +1,98 @@
+.header {
+  opacity: 0;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: -1;
+  background-color: transparent;
+
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+
+  &__logo {
+    font-size: 28px;
+    color: $heroLogo;
+    padding-top: 26px;
+    padding-left: 0px;
+    text-align: left;
+    transition: All 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      transform: scale(1.04);
+      color: $heroLogoActive;
+    }
+    @media (min-width: $mobileSmall) {
+      text-align: center;
+    }
+    @media (min-width: $mobile) {
+      font-size: 35px;
+    }
+    @media (min-width: $pc) {
+      padding-top: 40px;
+    }
+  }
+
+  &__logo-text-right {
+    color: #fff;
+    margin-left: 20px;
+  }
+
+  &__menu {
+    padding-top: 20px;
+    @media (min-width: $mobile) {
+      padding-top: 30px;
+    }
+    @media (min-width: $pc) {
+      padding-top: 50px;
+    }
+  }
+
+  &__list {
+    text-align: left;
+    @media (min-width: $mobileSmall) {
+      text-align: center;
+    }
+  }
+
+  &__link {
+  }
+
+  &__list-item {
+    display: inline-block;
+    &:hover,
+    :focus {
+      text-decoration: underline;
+    }
+    &:not(:last-child) {
+      margin-right: 12px;
+      @media (min-width: $mobile) {
+        margin-right: 20px;
+      }
+      @media (min-width: $pc) {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+.header--fixed {
+  opacity: 0.8;
+  z-index: 20;
+}
+
+.header__content {
+  height: 120px;
+  font-size: 16px;
+  justify-content: space-between;
+  line-height: 22px;
+
+  @media (min-width: $mobile) {
+    display: flex;
+    font-size: 18px;
+    height: 70px;
+  }
+}
