@@ -19,16 +19,17 @@
     color: $heroLogo;
     padding-top: 26px;
     padding-left: 0px;
-    text-align: left;
+    // text-align: left;
+    text-align: center;
     transition: All 350ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
       transform: scale(1.04);
       color: $heroLogoActive;
     }
-    @media (min-width: $mobileSmall) {
-      text-align: center;
-    }
+    // @media (min-width: $mobileSmall) {
+    //   text-align: center;
+    // }
     @media (min-width: $mobile) {
       font-size: 35px;
     }
@@ -53,10 +54,11 @@
   }
 
   &__list {
-    text-align: left;
-    @media (min-width: $mobileSmall) {
-      text-align: center;
-    }
+    // text-align: left;
+    text-align: center;
+    // @media (min-width: $mobileSmall) {
+    //   text-align: center;
+    // }
   }
 
   &__link {
