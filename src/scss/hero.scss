@@ -4,6 +4,12 @@
   height: 533px;
 
   &__background {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url('../../img/home/showcase.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,8 +85,7 @@
 .hero-section {
 }
 
-// webp
-html.webp .hero-section__background {
+.webp .hero-section__background {
   // retina
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -101,9 +106,7 @@ html.webp .hero-section__background {
     url('../../img/home/showcase.webp');
 }
 
-// no-webp
-html.no-webp .hero-section__background {
-  // retina
+.no-webp .hero-section__background {
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
