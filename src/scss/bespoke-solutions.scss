@@ -67,17 +67,17 @@
     }
 
     &__button-color {
+        border: 1px solid #ffffff;
+        &:hover,
+        &:focus {
+            color: $buttonOne;
+            background-color: $mainColor;
+        }
     }
 }
 .button {
-    border: 1px solid #ffffff;
     margin-top: 24px;
     margin-bottom: 79px;
-    &:hover,
-    &:focus {
-        color: $buttonOne;
-        background-color: $mainColor;
-    }
 }
 .button-text {
 }
