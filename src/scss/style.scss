@@ -1,13 +1,13 @@
-@use 'sass:math';
+@use "sass:math";
 
 // Подключение миксинов ===========================================================================================================================================================================================================================================================================
-@import 'base/mixins';
+@import "base/mixins";
 
-@import 'fonts';
-@import 'icons';
+@import "fonts";
+@import "icons";
 
 // default
-$fontFamily: 'OpenSans', sans-serif;
+$fontFamily: "OpenSans", sans-serif;
 $fontSize: 18px;
 
 // Основной цвет шрифта
@@ -18,6 +18,8 @@ $mainGray: #46434366;
 $mainDarkYellow: #ac9a5a;
 $mainWhite: #fff;
 $heroLogo: #28a745;
+$backgroundOne: #28a745;
+$buttonOne: #28a745;
 $heroLogoActive: #2ebf4f;
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
@@ -40,45 +42,44 @@ $responsiveType: 1;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поинты
-$pc: em(
-  $containerWidth
-); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
 
 // Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
-@import 'base/null';
+@import "base/null";
 
 body {
-  color: $mainColor;
-  background-color: $mainDark;
-  // Скролл заблокирован
-  .lock & {
-    overflow: hidden;
-    touch-action: none;
-  }
+    color: $mainColor;
+    background-color: $mainDark;
+    line-height: 25px;
+    // Скролл заблокирован
+    .lock & {
+        overflow: hidden;
+        touch-action: none;
+    }
 }
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  // Сайт загружен
-  .loaded & {
-  }
-  // Прижимаем footer
-  > main {
-    position: relative;
-    z-index: 2;
-    flex: 1 1 auto;
-  }
-  // Фикс для слайдеров
-  > * {
-    min-width: 0;
-  }
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // Сайт загружен
+    .loaded & {
+    }
+    // Прижимаем footer
+    > main {
+        position: relative;
+        z-index: 2;
+        flex: 1 1 auto;
+    }
+    // Фикс для слайдеров
+    > * {
+        min-width: 0;
+    }
 }
 
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
@@ -90,51 +91,51 @@ body {
 Снипет (HTML): cnt
 */
 @if ($responsiveType==1) {
-  // Отзывчивая
-  [class*='__container'] {
-    position: relative;
-    z-index: 2;
-    @if ($maxWidthContainer>0) {
-      max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
-      margin: 0 auto;
+    // Отзывчивая
+    [class*="__container"] {
+        position: relative;
+        z-index: 2;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+        @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
     }
-    @if ($containerPadding>0) {
-      padding: 0 rem(math.div($containerPadding, 2));
+    [class*="__container_wide"] {
+        max-width: rem(1680);
     }
-  }
-  [class*='__container_wide'] {
-    max-width: rem(1680);
-  }
 } @else {
-  // По брейк-поинтам
-  [class*='__container'] {
-    margin: 0 auto;
-    @if ($maxWidthContainer>0) {
-      max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
-    } @else {
-      @if ($containerPadding>0) {
-        padding: 0 rem(math.div($containerPadding, 2));
-      }
+    // По брейк-поинтам
+    [class*="__container"] {
+        margin: 0 auto;
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        } @else {
+            @if ($containerPadding>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+        @media (max-width: $pc) {
+            max-width: rem(970);
+        }
+        @media (max-width: $tablet) {
+            max-width: rem(750);
+        }
+        @media (max-width: $mobile) {
+            max-width: none;
+            @if ($containerPadding>0 and $maxWidthContainer>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
     }
-    @media (max-width: $pc) {
-      max-width: rem(970);
-    }
-    @media (max-width: $tablet) {
-      max-width: rem(750);
-    }
-    @media (max-width: $mobile) {
-      max-width: none;
-      @if ($containerPadding>0 and $maxWidthContainer>0) {
-        padding: 0 rem(math.div($containerPadding, 2));
-      }
-    }
-  }
 }
 
-@import 'header';
-@import 'base/button';
-@import 'hero';
-@import 'bespoke-solutions';
-@import 'footer';
+@import "header";
+@import "base/button";
+@import "hero";
+@import "bespoke-solutions";
+@import "footer";
