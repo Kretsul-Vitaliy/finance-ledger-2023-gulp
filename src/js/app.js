@@ -1,4 +1,5 @@
 import * as flsFunctions from "./files/isWebP.js";
+import { scrollHeight } from "./files/scrollHeight.js";
 
 window.addEventListener("load", async () => {
     if ("serviceWorker" in navigator.userAgentData) {
