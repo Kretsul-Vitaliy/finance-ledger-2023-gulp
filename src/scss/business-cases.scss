@@ -1,0 +1,85 @@
+.business-cases {
+    padding-top: 56px;
+    padding-bottom: 40px;
+    background-color: $mainColor;
+    color: $fontColorSecond;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    @media (min-width: $mobileSmall) {
+        font-size: 18px;
+        line-height: 25px;
+    }
+    @media (min-width: $tablet) {
+        font-size: 18px;
+        line-height: 33px;
+    }
+    &__container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__subtitle {
+    }
+
+    &__title {
+        margin-top: 16px;
+        font-size: 32px;
+        line-height: 44px;
+        @media (min-width: $mobileSmall) {
+            font-size: 40px;
+            line-height: 54px;
+        }
+        @media (min-width: $tablet) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+
+    &__text {
+        margin-top: 24px;
+        @media (min-width: $mobileSmall) {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+}
+.gallery {
+    margin-top: 30px;
+    &__list {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr);
+        grid-gap: 8px;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        @media (min-width: $mobileSmall) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 18px;
+        }
+        @media (min-width: $mobile) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 18px;
+        }
+
+        @media (min-width: $tablet) {
+            grid-gap: 24px;
+        }
+    }
+
+    &__item {
+    }
+
+    &__link {
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+        &:hover {
+            opacity: 0.6;
+            transform: scale(1.02);
+            transition: all 0.2s linear;
+        }
+    }
+}

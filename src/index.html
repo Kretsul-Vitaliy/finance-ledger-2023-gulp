@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- HEAD -->
-  @@include('partials/head.html', { "title": "Finance Ledger" })
-  <body>
-    <!-- WRAPPER -->
-    <div class="wrapper">
-      <!-- HEADER -->
+    <!-- HEAD -->
+    @@include('partials/head.html', { "title": "Finance Ledger" })
+    <body>
+        <!-- WRAPPER -->
+        <div class="wrapper">
+            <!-- HEADER -->
 
-      @@include('partials/header.html', { })
-      <!-- MAIN -->
-      <main class="main">
-        <div class="mainpage__body">
-          <!-- HERO -->
-          @@include('partials/hero.html', { })
-          <!-- bespoke-solutions -->
-          @@include('partials/bespoke-solutions.html', { })
+            @@include('partials/header.html', { })
+            <!-- MAIN -->
+            <main class="main">
+                <div class="mainpage__body">
+                    <!-- HERO -->
+                    @@include('partials/hero.html', { })
+                    <!-- bespoke-solutions -->
+                    @@include('partials/bespoke-solutions.html', { })
+                    <!-- business-cases -->
+                    @@include('partials/business-cases.html', { })
+                </div>
+            </main>
+            <!-- FOOTER -->
+            @@include('partials/footer.html', { })
+            <!-- SCRIPTS -->
+            @@include('partials/scripts.html', { })
         </div>
-      </main>
-      <!-- FOOTER -->
-      @@include('partials/footer.html', { })
-      <!-- SCRIPTS -->
-      @@include('partials/scripts.html', { })
-    </div>
-  </body>
+    </body>
 </html>
