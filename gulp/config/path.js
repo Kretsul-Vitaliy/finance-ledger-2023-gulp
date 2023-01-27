@@ -20,7 +20,7 @@ export const path = {
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`,
-        min: `${srcFolder}/js/min/*.js`,
+        min: `${srcFolder}/js/min/*.*`,
         svgicons: `${srcFolder}/svgicons/*.svg`,
         manifest: `${srcFolder}/manifest.json`,
         robots: `${srcFolder}/robots.txt`,
