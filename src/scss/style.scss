@@ -12,6 +12,7 @@ $fontSize: 18px;
 
 // Основной цвет шрифта
 $mainColor: #fff;
+$fontColorSecond: #333;
 $mainDark: #0c0b08;
 $mainYellow: #dcca87;
 $mainGray: #46434366;
@@ -133,9 +134,10 @@ body {
         }
     }
 }
-
+@import "libs/lightbox/lightbox";
 @import "header";
 @import "base/button";
 @import "hero";
 @import "bespoke-solutions";
+@import "business-cases";
 @import "footer";
