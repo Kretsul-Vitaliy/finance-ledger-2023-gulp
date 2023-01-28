@@ -20,6 +20,7 @@ $mainDarkYellow: #ac9a5a;
 $mainWhite: #fff;
 $heroLogo: #28a745;
 $backgroundOne: #28a745;
+$backgroundForm: #f4f4f4;
 $buttonOne: #28a745;
 $heroLogoActive: #2ebf4f;
 
@@ -140,4 +141,5 @@ body {
 @import "hero";
 @import "bespoke-solutions";
 @import "business-cases";
+@import "form";
 @import "footer";
