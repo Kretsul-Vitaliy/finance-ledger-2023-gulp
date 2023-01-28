@@ -1,5 +1,6 @@
 import * as flsFunctions from "./files/isWebP.js";
 import { scrollHeight } from "./files/scrollHeight.js";
+import { regexForm } from "./files/regex.js";
 
 window.addEventListener("load", async () => {
     if ("serviceWorker" in navigator.userAgentData) {
@@ -14,3 +15,4 @@ window.addEventListener("load", async () => {
 
 flsFunctions.isWebp();
 scrollHeight();
+regexForm();
