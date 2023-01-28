@@ -63,18 +63,15 @@
                     line-height: 25px;
                 }
             }
-            &:required:valid {
-                background-image: green;
-            }
-            &:required:invalid,
-            :focus:invalid {
-                background-image: linear-gradient(to right, pink, lightgreen);
-                background-image: url(/src/img/form/worning.svg);
-                background-position: right top;
-                background-repeat: no-repeat;
-            }
-            // .invalid {
-            //     // border-color: #dd2c00;
+            // &:required:valid {
+            //     background-image: green;
+            // }
+            // &:required:invalid,
+            // :focus:invalid {
+            //     background-image: linear-gradient(to right, pink, lightgreen);
+            //     background-image: url(../img/form/worning.svg);
+            //     background-position: right top;
+            //     background-repeat: no-repeat;
             // }
         }
     }
@@ -84,7 +81,7 @@
         margin-bottom: 69px;
     }
     &__button-form {
-        margin-top: 24px;
+        margin-top: 40px;
     }
 
     &__button-color {
@@ -96,3 +93,25 @@
 }
 .button-text {
 }
+.input__box-name {
+    position: relative;
+}
+.error {
+    position: absolute;
+    bottom: -30px;
+    left: 5px;
+    color: rgb(230, 5, 5);
+}
+#notify {
+    align-items: center;
+    font-size: 16px;
+    line-height: 25px;
+}
+// .error::before {
+//     content: " ";
+//     position: absolute;
+//     left: 10px;
+//     width: 28px;
+//     height: 14px;
+//     background: url(../img/form/worning.svg) no-repeat;
+// }
