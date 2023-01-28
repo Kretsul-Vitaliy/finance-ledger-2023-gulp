@@ -9,7 +9,7 @@ export function regexForm() {
     let regUserEmail = /[-!#$%^&*()_+|~=`{}\[\]:";'<>?,\/]/g;
     // let uPattern = /^[a-zA-Z0-9_-]{4,16}$/;
 
-    const elem = document.createElement("div");
+    const elem = document.createElement("small");
     elem.id = "notify";
     elem.style.display = "none";
     boxName.appendChild(elem);
@@ -18,18 +18,18 @@ export function regexForm() {
         event.preventDefault();
 
         if (!event.target.validity.valid) {
-            elem.textContent = "This is required field";
+            elem.textContent = "This is a required field";
 
-            elem.className = "error";
+            elem.className = "icon-worning error";
 
-            elem.style.display = "block";
+            elem.style.display = "flex";
 
             user.className = "invalid";
         }
     });
 
     user.addEventListener("input", function (event) {
-        if ("block" === elem.style.display) {
+        if ("flex" === elem.style.display) {
             user.className = "";
 
             elem.style.display = "none";
@@ -50,18 +50,18 @@ export function regexForm() {
         event.preventDefault();
 
         if (!event.target.validity.valid) {
-            elem.textContent = "This is required field";
+            elem.textContent = "This is a required field";
 
-            elem.className = "error";
+            elem.className = "icon-worning error";
 
-            elem.style.display = "block";
+            elem.style.display = "flex";
 
             userEmail.className = "invalid";
         }
     });
 
     userEmail.addEventListener("input", function (event) {
-        if ("block" === elem.style.display) {
+        if ("flex" === elem.style.display) {
             userEmail.className = "";
 
             elem.style.display = "none";
