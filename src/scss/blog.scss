@@ -1,21 +1,25 @@
-.bespoke-solutions {
+.blog {
     &__container {
         padding: 0;
 
         max-width: 1360px;
         margin: 0 auto;
     }
+
     &__aside {
         @media (min-width: $mobile) {
             display: flex;
             flex: 3;
+            flex-direction: row-reverse;
         }
     }
+
     &__image-box {
         @media (min-width: $mobile) {
             flex: 3;
         }
     }
+
     &__image {
         display: inline-block;
         max-width: 100%;
@@ -27,11 +31,12 @@
             height: 100%;
         }
     }
-}
-.solutions-block {
-    text-align: left;
-    &__box {
-        background-color: $backgroundOne;
+
+    &__block {
+        padding-top: 48px;
+        padding-bottom: 58px;
+        text-align: left;
+        background-color: $backgroundBlog;
         padding-left: 20px;
         padding-right: 20px;
 
@@ -40,8 +45,13 @@
         }
     }
 
-    &__title2 {
-        padding-top: 79px;
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        @media (min-width: $mobile) {
+            font-size: 18px;
+            line-height: 25px;
+        }
     }
 
     &__title {
@@ -54,7 +64,7 @@
         }
     }
 
-    &__text {
+    &__subtitle {
         font-size: 16px;
         line-height: 22px;
         padding-top: 24px;
@@ -66,18 +76,26 @@
 
     &__button {
         margin-top: 24px;
-        padding-bottom: 79px;
     }
 
     &__button-color {
         border: 1px solid #ffffff;
         &:hover,
         &:focus {
-            color: $buttonOne;
+            color: $buttonBlog;
             background-color: $mainColor;
         }
+    }
+
+    &__icon-button {
     }
 }
 
 .button-text {
+    font-size: 16px;
+    line-height: 22px;
+    @media (min-width: $mobile) {
+        font-size: 18px;
+        line-height: 25px;
+    }
 }
