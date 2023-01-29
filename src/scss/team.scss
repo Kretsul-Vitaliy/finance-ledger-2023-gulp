@@ -1,0 +1,134 @@
+.team {
+    padding-top: 72px;
+    padding-bottom: 50px;
+    background-color: $mainColor;
+    color: $fontColorSecond;
+    text-align: center;
+    @media (min-width: $mobile) {
+        padding-top: 40px;
+        padding-bottom: 42px;
+    }
+    @media (min-width: $pc) {
+        padding-top: 80px;
+        padding-bottom: 88px;
+    }
+    &__container {
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 44px;
+        padding-top: 16px;
+        @media (min-width: $mobile) {
+            font-size: 40px;
+            line-height: 54px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 22px;
+        padding-top: 24px;
+        @media (min-width: $mobile) {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+    &__list {
+        padding-top: 63px;
+        display: grid;
+        grid-template-columns: repeat minmax(320px, 1fr);
+        grid-gap: 20px;
+        @media (min-width: $mobile) {
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 24px;
+        }
+        @media (min-width: $pc) {
+            padding-top: 36px;
+        }
+    }
+
+    &__list-item {
+        margin: 0 auto;
+    }
+    &__image-box {
+        position: relative;
+    }
+
+    &__image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__list-name {
+        font-size: 20px;
+        line-height: 27px;
+        margin-top: 16px;
+    }
+
+    &__list-occupation {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 8px;
+    }
+}
+.overlay-social {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(04, 04, 04, 0.6);
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    &:hover,
+    &:focus {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.overlay-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 216px;
+    height: 100%;
+    border: none;
+    position: absolute;
+    &__item {
+        font-size: 35px;
+        color: $mainColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        &:hover {
+            opacity: 0.8;
+            visibility: visible;
+            box-shadow: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+            transition: all 0.2s linear;
+        }
+    }
+
+    &__link {
+    }
+}
+.icon-facebook {
+}
+.icon-twitter {
+}
+.icon-youtube {
+}
+.icon-linkedin-in {
+}
